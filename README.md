@@ -1,10 +1,10 @@
-# Curso de Lógica de Programação - Informática Para Internet
+<h1 text-align="center">Curso de Lógica de Programação - Informática Para Internet</h1>
 
-Olá, eu sou Aécio Brito, tutor do curso de Informática Para Internet. Este repositório contém os materiais e códigos desenvolvidos durante o curso de Lógica de Programação.
+## :memo: Descrição
+Nesse repositório contém algumas atividades focadas em lógica de programação realizadas em sala de aula no curso técnico que realizo no Senac. Os exercicios foram elaborados pelo professor Aécio Brito e resolvidos por mim durante as aulas.
 
-## Estrutura do Projeto
-
-O projeto segue a estrutura abaixo, com cada aula em um diretório específico:
+## :books: Estrutura do Projeto
+* O projeto segue a estrutura abaixo, com cada aula em um diretório específico:
 - aulas/
   - aulaxx/
     - aula.html   
@@ -13,9 +13,12 @@ O projeto segue a estrutura abaixo, com cada aula em um diretório específico:
     - desafios/
       - Indented item
 
-Os desafios são totalmente opcionais.
+## :wrench: Tecnologia utilizada
+* JavaScript;
+ HTML
+ CSS
 
-## Referências Externas
+## :rocket: Referências Externas
 
 - [Git](https://git-scm.com/): Download do Git para o seu sistema operacional
   - [Iniciando um projeto Git](https://www.atlassian.com/git/tutorials/setting-up-a-repository): Há tabém explicações adicionais sobre os comandos
@@ -30,19 +33,30 @@ Os desafios são totalmente opcionais.
 
 - [Code Signal](https://app.codesignal.com): Site para prática de entrevistas técnicas com foco em lógica de programação.
 
-## Acesso Online
 
-Você pode acessar uma versão online deste projeto em [Logica-Programacao-Senac](https://aeciobrito.github.io/Logica-Programacao-Senac/).
 
-Sinta-se à vontade para explorar os códigos, a estrutura do curso, e aproveitar os recursos externos para aprimorar ainda mais os conhecimentos em lógica de programação.
+## :handshake: Colaboradores
+<table>
+  <tr>
+    <td text-align="center">
+      <a href="https://github.com/jessicasamppaio">
+        <img src="/aulas/icons/eu.jpg" width="100px;" alt="Foto de Jéssica Sampaio no GitHub"/><br>
+        <sub>
+          <b>jessicasamppaio</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
 
----
-
-## Links Adicionais
-
-- [Emmet Atalhos](https://code.visualstudio.com/docs/editor/emmet): Snippets do VSCode para desenvolvimento web
-
-**Aécio Mendes Brito**
-
-[Informática Para Internet - Senac São Paulo]
+ <tr>
+    <td text-align="center">
+      <a href="https://github.com/aeciobrito">
+        <img src="/aulas/icons/prof aécio.jpg" width="100px;" alt="Foto de Aécio Brito no GitHub"/><br>
+        <sub>
+          <b>aeciobrito</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
 
