@@ -15,8 +15,8 @@ Nesse repositório contém algumas atividades focadas em lógica de programaçã
 
 ## :wrench: Tecnologia utilizada
 * JavaScript;
- HTML
- CSS
+* HTML
+* CSS
 
 ## :rocket: Referências Externas
 
@@ -40,7 +40,7 @@ Nesse repositório contém algumas atividades focadas em lógica de programaçã
   <tr>
     <td text-align="center">
       <a href="https://github.com/jessicasamppaio">
-        <img src="/aulas/icons/eu.jpg" width="100px;" alt="Foto de Jéssica Sampaio no GitHub"/><br>
+        <img src="https://avatars.githubusercontent.com/u/56259137?v=4" width="100px;" alt="Foto de Jéssica Sampaio no GitHub"/><br>
         <sub>
           <b>jessicasamppaio</b>
         </sub>
@@ -51,7 +51,7 @@ Nesse repositório contém algumas atividades focadas em lógica de programaçã
  <tr>
     <td text-align="center">
       <a href="https://github.com/aeciobrito">
-        <img src="/aulas/icons/prof aécio.jpg" width="100px;" alt="Foto de Aécio Brito no GitHub"/><br>
+        <img src="/aulas/icons/" width="100px;" alt="Foto de Aécio Brito no GitHub"/><br>
         <sub>
           <b>aeciobrito</b>
         </sub>
