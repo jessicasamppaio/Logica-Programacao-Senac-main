@@ -15,8 +15,6 @@ Nesse repositório contém algumas atividades focadas em lógica de programaçã
 
 ## :wrench: Tecnologia utilizada
 * JavaScript;
-* HTML
-* CSS
 
 ## :rocket: Referências Externas
 
