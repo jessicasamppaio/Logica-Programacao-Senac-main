@@ -2,12 +2,12 @@ class MaterialBibliografico {
     constructor(titulo, autor) {
         this.titulo = titulo;
         this.autor = autor;
-        this.disponivel = true;
+        this._disponivel = true;
     }
 
     realizarEmprestimo() {
-        if (this.disponivel) {
-            this.disponivel = false;
+        if (this._disponivel) {
+            this._disponivel = false;
             return true; //Emprestimo realizado com sucesso
         } else {
             return false; //Material já emprestado
@@ -15,12 +15,23 @@ class MaterialBibliografico {
     }
 
     realizarDevolucao() {
-        if(!this.disponivel) {
-            this.disponivel = true;
+        if(!this._disponivel) {
+            this._disponivel = true;
             return true; //Devolução realizada com sucesso
         } else {
             return false; //Material já devolvido previamente
         }
+    }
+    
+    renomearAutor(novoNome) {
+        if(novoNome == "") {
+            return alert("Não pode cadastrar nome vazio")
+        }
+        this.autor = novoNome;
+    }
+
+    toString() {
+        return `${this.titulo} - ${this.autor}`;
     }
 }
 
@@ -28,6 +39,10 @@ class Livro extends MaterialBibliografico {
     constructor(titulo, autor, genero) {
         super(titulo, autor);
         this.genero = genero;
+    }
+
+    alterarGenero(novoGenero) {
+        this.genero = novoGenero;
     }
 }
 
@@ -51,10 +66,10 @@ function realizarAcao(acao) {
 
     if(acao === 'emprestimo') {
         const emprestimoSucesso = livroSelecionado.realizarEmprestimo();
-        exibirResultado(`Emprestimo de ${livroSelecionado.titulo}: ${emprestimoSucesso? 'Sucesso' : 'Material emprestado!'}`);
+        exibirResultado(`Emprestimo de ${livroSelecionado.titulo}: ${emprestimoSucesso? 'Sucesso' : 'Material já emprestado'}`);
     } else if (acao === 'devolucao') {
         const devolucaoSucesso = livroSelecionado.realizarDevolucao();
-        exibirResultado(`Devolução de ${livroSelecionado.titulo}: ${devolucaoSucesso? 'Sucesso' : 'Material devolvido com sucesso!'}`);
+        exibirResultado(`Devolução de ${livroSelecionado.titulo}: ${devolucaoSucesso? 'Sucesso' : 'Material já devolvido'}`);
     }
 }
 
@@ -79,3 +94,6 @@ for(let i = 0; i < livros.length; i++) {
     option.text = livro.titulo;
     selectLivros.add(option);
 }
+
+console.log(livros[0].toString());
+console.log(livros[3].toString());
