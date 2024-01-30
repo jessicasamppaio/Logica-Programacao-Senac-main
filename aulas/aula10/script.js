@@ -17,6 +17,11 @@ Crie a função atacar
     - atacar, recebe como parametro um personaem/inimigo
     - so pode atacar alguém com vida
     - exibe o console.log informando qual a força do ataque e inimigo atacado
+
+Exercício:
+    - Crie um limite de vida máxima para o personagem
+    - Crie uma função de recuperar vida que recebe um total de pontos para recuperar
+    - A recuperação de via não pode fazer o personaem ir além da vida máxima
 */
 
 class Personagem {
@@ -27,6 +32,7 @@ class Personagem {
         this.posicao = posicao;
         this.vida = vida;
         this.vivo = vivo;
+        this.vidaMaxima = vida;
     }
 
     morrer() {
@@ -34,10 +40,10 @@ class Personagem {
         console.log(`O ${this.nome} morreu!`);
     }
 
-    tomarDano(quantidade) {
+    tomarDano(dano) {
         if (this.vivo) {            
-            this.vida = this.vida - quantidade;
-            console.log(`${this.nome} sofreu ${quantidade} de dano, e agora tem ${this.vida} de vida`)
+            this.vida = this.vida - dano;
+            console.log(`${this.nome} sofreu ${dano} de dano, e agora tem ${this.vida} de vida`)
 
             if (this.vida <= 0) {
                 this.vida = 0;
@@ -56,13 +62,24 @@ class Personagem {
             console.log("Não é possível atacar na condição de morto!");
         }
     }
+
+    recuperarVida(vidaRecebida, personagem){
+        personagem.vida += vidaRecebida;        
+
+        if(personagem.vida > personagem.vidaMaxima) {
+            personagem.vida = personagem.vidaMaxima;
+        }
+
+        console.log(`${personagem.nome} recuperou um total de ${vidaRecebida}, ficando com ${personagem.vida} de vida`);
+    }
 }
 
 let personagem1 = new Personagem("Arthur", 10, 12, 100, 1, true);
-let personagem2 = new Personagem("Lulu", 12, 8, 85, 1);
+let personagem2 = new Personagem("Lulu", 2, 8, 85, 1);
 
 console.log(personagem1);
 console.log(personagem2);
 
 console.log(personagem1.atacar(personagem2));
 console.log(personagem2.atacar(personagem1));
+console.log(personagem1.recuperarVida(20, personagem2));
