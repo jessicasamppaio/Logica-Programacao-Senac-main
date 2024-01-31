@@ -34,10 +34,26 @@ Nesse repositório contém algumas atividades focadas em lógica de programaçã
 
 
 ## :handshake: Colaboradores
+<table>
+  <tr>
+    <td text-align="center">
+      <a href="https://github.com/jessicasamppaio">
+        <img src="/aulas/icons/eu.jpg" width="100px;" alt="Foto de Jéssica Sampaio no GitHub"/><br>
+        <sub>
+          <b>jessicasamppaio</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
 
-[![jessicasamppaio](/aulas/icons/eu.jpg)](https://github.com/jessicasamppaio)
-<sub><b>jessicasamppaio</b></sub>
-
-[![aeciobrito](/aulas/icons/prof aécio.jpg)](https://github.com/aeciobrito)
-<sub><b>aeciobrito</b></sub>
-
+ <tr>
+    <td text-align="center">
+      <a href="https://github.com/aeciobrito">
+        <img src="/aulas/icons/prof aécio.jpg" width="100px;" alt="Foto de Aécio Brito no GitHub"/><br>
+        <sub>
+          <b>aeciobrito</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
