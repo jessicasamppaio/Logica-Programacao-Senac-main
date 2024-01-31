@@ -36,7 +36,7 @@ Nesse repositório contém algumas atividades focadas em lógica de programaçã
 ## :handshake: Colaboradores
 <table>
   <tr>
-    <td text-align="center">
+    <td style="text-align: center;">
       <a href="https://github.com/jessicasamppaio">
         <img src="/aulas/icons/eu.jpg" width="100px;" alt="Foto de Jéssica Sampaio no GitHub"/><br>
         <sub>
@@ -44,10 +44,8 @@ Nesse repositório contém algumas atividades focadas em lógica de programaçã
         </sub>
       </a>
     </td>
-  </tr>
-
- <tr>
-    <td text-align="center">
+    
+    <td style="text-align: center;">
       <a href="https://github.com/aeciobrito">
         <img src="/aulas/icons/prof aécio.jpg" width="100px;" alt="Foto de Aécio Brito no GitHub"/><br>
         <sub>
@@ -57,4 +55,5 @@ Nesse repositório contém algumas atividades focadas em lógica de programaçã
     </td>
   </tr>
 </table>
+
 
