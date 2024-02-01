@@ -57,4 +57,3 @@ Nesse repositório contém algumas atividades focadas em lógica de programaçã
     </td>
   </tr>
 </table>
-
