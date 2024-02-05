@@ -19,7 +19,7 @@ Nesse repositório contém algumas atividades focadas em lógica de programaçã
 ## :rocket: Referências Externas
 
 - [Git](https://git-scm.com/): Download do Git para o seu sistema operacional
-  - [Iniciando um projeto Git](https://www.atlassian.com/git/tutorials/setting-up-a-repository): Há tabém explicações adicionais sobre os comandos
+  - [Iniciando um projeto Git](https://www.atlassian.com/git/tutorials/setting-up-a-repository): Há também explicações adicionais sobre os comandos
 - [Github](https://docs.github.com/pt/get-started/quickstart/set-up-git): Como configurar o git para trabalhar com seus repositórios no github
   - [Criar um repositório](https://docs.github.com/pt/get-started/quickstart/create-a-repo): Como criar um repositório diretamente no github
 
