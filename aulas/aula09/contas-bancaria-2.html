@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastro Contas Bancarias</title>
 </head>
 <body>
+    <h1>Cadastro de Clientes</h1>
+
+    <form>
+        <label for="nomeCliente">Nome do Cliente:</label>
+        <input type="text" id="nomeCliente">
+
+        <label for="cpfDoCliente">CPF do Cliente:</label>
+        <input type="text" id="cpfDoCliente" required>
+
+        <button type="button" onclick="cadastrarCliente">Cadastrar cliente</button>
+    </form>
+
+    <h1>Cadastro de Contas</h1>
+    <form id="contaForm">
+        <label for="numero">Número da Conta:</label>
+        <input type="number" id="numero" required>
+
+        <label for="numero">Saldo Inicial:</label>
+        <input type="number" id="saldo" required>
+
+        <label for="tipoDeConta">Tipo de Conta:</label>
+
+        <select id="tipoDeConta" required>
+        <option value="ContaCorrente">Conta Corrente</option>
+        <option value="ContaPoupanca">Conta Poupança</option>
+        </select>
+
+        <label for="cliente">Selecione o Cliente:</label>
+        <select id="cliente"required>
+            
+        </select>
+    </form>
+
     <script src="contas-bancarias.js"></script>
 </body>
 </html>
