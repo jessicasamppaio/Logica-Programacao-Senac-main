@@ -39,7 +39,9 @@ class Estoque {
     }
 
     removerProduto(nome) {
-      this.listaProdutos = this.nome 
+        for (let i = 0; i < this.listaProdutos.length; i++){
+        
+        }
     }
 
     verificarEstoqueDisponivel(nome) {
@@ -48,6 +50,14 @@ class Estoque {
 
     calcularValorTotalEstoque() {
 
+        }
     }
+ 
 
-}
+const meuEstoque = new Estoque();
+
+const produto1 = new Produto("Macarrao", 100, 5);
+meuEstoque.adicionarProduto(produto1);
+
+
+
