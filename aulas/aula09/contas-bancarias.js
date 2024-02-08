@@ -83,20 +83,12 @@ class ContaPoupanca extends Conta {
 let contas = [];
 let clientes = [];
 
-// let clienteA = new Cliente("Mizuki", "1234567890");
-// clientes.push(clienteA);
-// let clienteB = new Cliente("Aiko", "0987654321");
-// clientes.push(clienteB);
-
-// let contaX = new ContaCorrente(clienteA, 123, 100, 150);
-// contas.push(contaX);
-// let contaY = new ContaPoupanca(clienteB, 111, 100, 0.01);
-// contas.push(contaY);
-// let contaZ = new ContaCorrente(clienteB, 235, 0, 180);
-// contas.push(contaZ);
-
-// contaY.transferir(50, contaX)
-// console.log("Conta Y: ", contaY);
-// console.log("Conta X: ", contaX)
-
-
+function cadastrarCliente(){
+    // pegar dados da tela
+    const nome = document.getElementById("nomeCliente").value
+    const cpf = document.getElementById("cpfCliente").value
+    // instanciar novo cliente
+    const cliente = new Cliente(nome, cpf);
+    // adicionar esse cliente a lista de clientes
+    cliente.push(cliente);
+}
