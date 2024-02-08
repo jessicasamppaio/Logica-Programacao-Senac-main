@@ -94,3 +94,13 @@ function cadastrarCliente(){
     // adicionar esse cliente a lista de clientes
     cliente.push(cliente);
 }
+
+function cadastrarConts() {
+    // pegar os dados da tela
+     const numero = parseInt(document.getElementById("numero").value)
+     const saldo = parseInt(document.getElementById("saldo").value)
+     const tipoConta = parseInt(document.getElementById("tipoConta").value)
+    // identificar o cliente selecionado na lista de clientes
+
+    // instanciar uma nova conta, a partir do tipo de conta selecionado
+}
