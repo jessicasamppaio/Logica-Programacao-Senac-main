@@ -33,8 +33,8 @@ class Pessoa {
     }
 }
 
-const pessoaA = new Pessoa("Fulano", 2000);
-const pessoaB = new Pessoa("Beltrano", 2012);
+const pessoaA = new Pessoa("Jéssica", 2000);
+const pessoaB = new Pessoa("Mizuki", 2012);
 
 //pessoaA.seApresentar(pessoaB)
 console.log(pessoaA.ehAdulto());
