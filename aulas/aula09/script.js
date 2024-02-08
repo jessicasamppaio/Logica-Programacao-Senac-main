@@ -1,74 +1,79 @@
+class Cliente {
+    constructor(nome, cpf) {
+        this.nome = nome;
+        this.cpf = cpf;
+    }
+
+}
+
+
 class Conta {
-    constructor(numero, saldo = 0) {
+    constructor(numero, saldo, cliente) {
         this.numero = numero;
         this.saldo = saldo;
+        this.cliente = cliente;
     }
-
-    sacar(valor) {
-        if(this.saldo >= valor && valor > 0) {
-            this.saldo - valor;
-            return true; //Saque realizado com sucesso
+    sacar(realizarSaque) {
+        if (realizarSaque <= this.saldo && this.saldo > 0) {
+            this.saldo -= realizarSaque;
+            return true;
         } else {
-            return false; // Saldo insuficiente ou valor inválido
+            return false;
         }
     }
 
-    depositar(valor) {
-        if(valor > 0) {
-            this.saldo += valor;
-            return true; // Deposito realizado com sucesso
+
+    depositar(valorDeposito) {
+        if (valorDeposito > 0) {
+            this.saldo += valorDeposito; 
+            return true;
         } else {
-            return false; // Valor de deposito invalido
+            return false;
         }
     }
 
-    toString() {
-        return `Numero: ${this.numero} - Saldo: ${this.saldo}`;
+    transferir(realizarTransferencia, conta) {
+        if (realizarTransferencia <= this.saldo && this.saldo > 0) {
+            this.saldo -= realizarTransferencia;
+            return true
+        } else {
+            return false;
+        }
     }
+
+
 }
 
 class ContaCorrente extends Conta {
-    constructor(numero, saldo = 0, limiteChequeEspecial = 200) {
-        super(numero, saldo);
+    constructor(numero, saldo, cliente, limiteChequeEspecial) {
+        super(numero, saldo, cliente);
         this.limiteChequeEspecial = limiteChequeEspecial;
+
     }
-
-    sacar(valor) {
-        const valorDisponivelParaSaque = this.saldo + this.limiteChequeEspecial;
-
-        if(valor > 0 && valorDisponivelParaSaque >= valor) {
-            this.saldo -= valor;
-            return true; // Saque realizado com sucesso
+    sacar(realizarSaque) {
+        const saldoComChequeEspecial = this.saldo + this.limiteChequeEspecial;
+        if (realizarSaque <= saldoComChequeEspecial && saldoComChequeEspecial > 0 ) {
+            saldoComChequeEspecial -= realizarSaque;
+            return true;
         } else {
-            return false; // Slado insuficiente ou valor inválido
+            return false;
         }
     }
 }
 
-class ContaPoupanca extends Conta {
-    constructor(numero, saldo = 0, taxaRendimento = 0.02) {
-        super(numero, saldo);
-        this.taxaRendimento = taxaRendimento;
+class contaPoupança extends Conta {
+    constructor(numero, saldo, cliente, taxaDeRendimento) {
+        super(numero, saldo, cliente, taxaDeRendimento)
+        this.taxaDeRendimento = taxaDeRendimento;
     }
 
-    aplicarRendimento() {
-        this.saldo += this.saldo * this.taxaRendimento;
+    sacar(realizarSaque) {
+        if (realizarSaque <= this.saldo && this.saldo > 0) {
+            this.saldo -= realizarSaque;
+            return true;
+        } else {
+            return false;
+        }
     }
+
 }
-
-let contaCorr = new ContaCorrente(1122, 100);
-let contaPoup = new ContaPoupanca(2345, 100);
-console.log(contaCorr.toString());
-console.log(contaPoup.toString());
-
-console.log("Saque de 200 reais em cada!")
-contaCorr.sacar(200);
-contaPoup.sacar(200);
-
-console.log(contaCorr.toString());
-console.log(contaPoup.toString());
-
-
-console.log("Apliquei rendimento na conta poupança")
-contaPoup.aplicarRendimento();
-console.log(contaPoup.toString());

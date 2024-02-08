@@ -27,18 +27,16 @@ class Conta {
 
     depositar(valorDeposito) {
         if (valorDeposito > 0) {
-        // this.saldo = this.saldo + valorDeposito;
-            this.saldo -= valorSaque;
+            this.saldo += valorDeposito; 
             return true;
         } else {
-            return false
+            return false;
         }
     }
 
     transferir(valorTransferencia, conta){
     // if(this.saldo >= valorTransferencia && valorTransferencia > 0){
         //     this.saldo -= valorTransferencia;
-        //     conta.saldo += valorTransferencia 
        
         if(this.sacar(valorTransferencia)){
             conta.depositar(valorTransferencia) 
