@@ -5,7 +5,7 @@ class Produto {
         this.precoUnitario = precoUnitario;
     }
 
-    calcularValorTotal(valorTotal) {
+    calcularValorTotal() {
         let valorTotal = this.quantidadeDisponivel * this.precoUnitario;
         return valorTotal;
     }
@@ -40,24 +40,33 @@ class Estoque {
 
     removerProduto(nome) {
         for (let i = 0; i < this.listaProdutos.length; i++){
-        
+          if(this.listaProdutos[i].nome === nome){
+            this.listaProdutos.splice(i, 1);
+            break;
+          }
         }
     }
 
     verificarEstoqueDisponivel(nome) {
-
+      
     }
 
     calcularValorTotalEstoque() {
-
+        let valorTotalEstoque = 0;
+        for (const produto of this.listaProdutos){
+             valorTotalEstoque = valorTotalEstoque + produto.calcularValorTotal();
+        }
+        return valorTotalEstoque
         }
     }
- 
+
 
 const meuEstoque = new Estoque();
 
-const produto1 = new Produto("Macarrao", 100, 5);
-meuEstoque.adicionarProduto(produto1);
+meuEstoque.adicionarProduto(new Produto("Macarrao", 100, 5));
+meuEstoque.verificarEstoqueDisponivel(new Produto("Leite", 50, 4));
+
+meuEstoque.calcularValorTotalEstoque()
 
 
 
